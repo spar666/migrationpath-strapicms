@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banners",
+  "info": {
+    "singularName": "banner",
+    "pluralName": "banners",
+    "displayName": "Banner",
+    "description": "Site-wide banners"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["info", "warning", "promo"]
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    }
+  }
+}
