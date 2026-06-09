@@ -4,6 +4,7 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
+    "preinstall": "npm config set legacy-peer-deps true",
     "build": "strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
