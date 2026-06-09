@@ -4,7 +4,6 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-    "preinstall": "npm config set legacy-peer-deps true",
     "build": "strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
@@ -19,8 +18,7 @@
     "@strapi/admin": "^5.38.0",
     "@strapi/core": "^5.38.0",
     "@strapi/data-transfer": "^5.38.0",
-    "@strapi/design-system": "^1.19.0",
-    "@strapi/helper-plugin": "4.26.1",
+    "@strapi/design-system": "^2.2.0",
     "@strapi/icons": "^2.2.0",
     "@strapi/plugin-cloud": "5.36.1",
     "@strapi/plugin-documentation": "^5.36.1",
