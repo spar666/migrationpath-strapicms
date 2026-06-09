@@ -20,7 +20,7 @@
     "@strapi/core": "^5.38.0",
     "@strapi/data-transfer": "^5.38.0",
     "@strapi/design-system": "^2.2.0",
-    "@strapi/helper-plugin": "4.25.23",
+  "@strapi/helper-plugin": "^5.36.1",
     "@strapi/icons": "^2.2.0",
     "@strapi/plugin-cloud": "5.36.1",
     "@strapi/plugin-documentation": "^5.36.1",
