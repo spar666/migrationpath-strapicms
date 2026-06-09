@@ -19,7 +19,12 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
     port: env.int('PORT', 1337),
     url: env('PUBLIC_URL', 'http://localhost:1337'),
     app: {
-      keys: keys.length > 0 ? keys : ['default-dev-key-do-not-use-in-production'],
+      keys: keys.length > 0 ? keys : [
+        'zPs56quTCRHK9Qyv5pIEog==',
+        '7hzrbxT9sG4Ki9w00PerOg==',
+        'xLrViUfkBckbaVDoI+MJsw==',
+        'bkhOqhIG2+rnILZezFaYtw=='
+      ],
     },
   } satisfies Core.Config.Server;
 };
