@@ -1,9 +1,9 @@
 import type { Core } from '@strapi/strapi';
 
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server => {
-  // Support both APP_KEYS (preferred) and fallback APP_KEY (single value)
+  // Support both PRODUCTION_APP_KEYS (preferred) and fallback APP_KEY (single value)
   // env.array will parse comma-separated values into an array.
-  const providedAppKeys = env.array('APP_KEYS', [] as string[]);
+  const providedAppKeys = env.array('PRODUCTION_APP_KEYS', [] as string[]);
   const fallbackSingleKey = env('APP_KEY', '');
   const appKeys = (providedAppKeys && providedAppKeys.length > 0)
     ? providedAppKeys
