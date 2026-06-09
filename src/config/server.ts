@@ -3,13 +3,16 @@ import type { Core } from '@strapi/strapi';
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server => {
   // Support both comma-separated APP_KEYS (preferred) and single APP_KEY (fallback)
   const rawKeys = env.array('APP_KEYS', []);
+  const customProdKeys = env.array('PRODUCTION_APP_KEYS', []);
   const rawSingleKey = env('APP_KEY', '');
 
-  const keys = rawKeys.filter(Boolean).length > 0
-    ? rawKeys.filter(Boolean)
-    : rawSingleKey
-      ? [rawSingleKey]
-      : [];
+  const keys = customProdKeys.filter(Boolean).length > 0
+    ? customProdKeys.filter(Boolean)
+    : rawKeys.filter(Boolean).length > 0
+      ? rawKeys.filter(Boolean)
+      : rawSingleKey
+        ? [rawSingleKey]
+        : [];
 
   return {
     host: env('HOST', '0.0.0.0'),
