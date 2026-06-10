@@ -6,7 +6,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
     port: env.int('PORT', 1337),
     url: env('PUBLIC_URL', 'http://localhost:1337'),
     app: {
-      keys: ['zPs56quTCRHK9Qyv5pIEog==', '7hzrbxT9sG4Ki9w00PerOg==', 'xLrViUfkBckbaVDoI+MJsw==', 'bkhOqhIG2+rnILZezFaYtw=='],
+      keys: env.array('APP_KEYS', ['zPs56quTCRHK9Qyv5pIEog==', '7hzrbxT9sG4Ki9w00PerOg==', 'xLrViUfkBckbaVDoI+MJsw==', 'bkhOqhIG2+rnILZezFaYtw==']),
     },
   };
 };
