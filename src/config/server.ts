@@ -6,7 +6,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
     port: env.int('PORT', 1337),
     url: env('PUBLIC_URL', 'http://localhost:1337'),
     app: {
-      keys: env.array('APP_KEYS') || ['generated-secret-key-1', 'generated-secret-key-2'],
+      keys: env.array('APP_KEYS')
     },
     webhooks: {
       populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
