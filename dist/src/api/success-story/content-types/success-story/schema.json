@@ -1,0 +1,38 @@
+{
+    "kind": "collectionType",
+    "collectionName": "success_stories",
+    "info": {
+        "singularName": "success-story",
+        "pluralName": "success-stories",
+        "displayName": "Success Story",
+        "description": "Social proof"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "country": {
+            "type": "string"
+        },
+        "visa_subclass": {
+            "type": "string"
+        },
+        "quote": {
+            "type": "text",
+            "required": true
+        },
+        "avatar": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": ["images"]
+        },
+        "featured": {
+            "type": "boolean",
+            "default": false
+        }
+    }
+}
