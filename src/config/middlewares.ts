@@ -1,6 +1,4 @@
-// Strapi expects middlewares to be exported as an array of strings or
-// objects with the shape { name?: string, resolve?: string, config: any }
-// This file preserves the same middleware settings but uses the array format.
+
 
 const middlewares = [
   'strapi::errors',
